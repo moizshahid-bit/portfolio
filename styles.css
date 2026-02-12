@@ -1,69 +1,67 @@
+/** Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #001f3f; /* Dark blue background */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/** Responsive Containers */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #001f3f; /* Dark blue background */
-    color: #ffffff; /* White text */
-    line-height: 1.6;
-    margin: 0;
+/** Link Styles */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-h1, h2, h3 {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
+a:hover {
+    color: #ff851b; /* Change color on hover */
 }
 
-/* Responsive Typography */
-h1 {
-    font-size: 2.5em;
-}
-h2 {
-    font-size: 2em;
-}
-h3 {
-    font-size: 1.75em;
-}
-
-/* Button styles with animations */
+/** Button Styles */
 .button {
-    background-color: #ffffff; /* White background */
-    color: #001f3f; /* Dark blue text */
-    padding: 10px 15px;
+    background-color: #007bff; /* Blue button */
+    color: white;
     border: none;
     border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
 .button:hover {
-    background-color: #007bff; /* Light blue on hover */
-    transform: translateY(-3px);
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-/* Mobile-first design */
-/* Small devices (phones) */
+/** Responsive Layout */
 @media (max-width: 600px) {
     .container {
-        padding: 0 10px;
+        padding: 10px; /* Reduced padding for mobile */
     }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    h3 {
-        font-size: 1.25em;
+    
+    .button {
+        width: 100%; /* Full-width buttons on mobile */
     }
 }
 
-/* Medium devices (tablets) */
-@media (min-width: 601px) and (max-width: 900px) {
-    h1 {
-        font-size: 2.2em;
+/** Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards; /* Apply fade-in effect */
 }
